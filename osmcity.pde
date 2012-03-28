@@ -117,6 +117,18 @@ void setup() {
 
 void draw() {
   background(0);
+
+  if(rounding > 0) {
+    stroke(20);
+    for(int i = 0; i <= width/rounding; i++) {
+      line(i*rounding + rounding/2, 0, i*rounding + rounding/2, height);
+    }
+
+    for(int i = 0; i <= height/rounding; i++) {
+      line(0, i*rounding + rounding/2, width, i*rounding + rounding/2);
+    }
+  }
+
   stroke(255);
   
   println(r(50.7515109));
